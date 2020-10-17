@@ -109,7 +109,7 @@ var WildRydes = window.WildRydes || {};
      */
 
     $(function onDocReady() {
-        $('#signinButton').Click(handleSignin);
+        $('#signinButton').click(handleSignin);
         $('#registrationForm').submit(handleRegister);
         $('#verifyForm').submit(handleVerify);
     });
