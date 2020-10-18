@@ -117,6 +117,7 @@ var WildRydes = window.WildRydes || {};
     function handleSignin(event) {
         var email = $('#emailInputSignin').val();
         var password = $('#passwordInputSignin').val();
+        console.log('email: ' + email + '. password: ' + password);
         event.preventDefault();
         signin(email, password,
             function signinSuccess() {
