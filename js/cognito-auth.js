@@ -1,6 +1,6 @@
-/*global WildRydes _config AmazonCognitoIdentity AWSCognito*/
+/*global Edu4Future _config AmazonCognitoIdentity AWSCognito*/
 
-var WildRydes = window.WildRydes || {};
+var Edu4Future = window.Edu4Future || {};
 
 (function scopeWrapper($) {
     var signinUrl = '/index.html';
@@ -25,11 +25,11 @@ var WildRydes = window.WildRydes || {};
         AWSCognito.config.region = _config.cognito.region;
     }
 
-    WildRydes.signOut = function signOut() {
+    Edu4Future.signOut = function signOut() {
         userPool.getCurrentUser().signOut();
     };
 
-    WildRydes.authToken = new Promise(function fetchCurrentAuthToken(resolve, reject) {
+    Edu4Future.authToken = new Promise(function fetchCurrentAuthToken(resolve, reject) {
         var cognitoUser = userPool.getCurrentUser();
 
         if (cognitoUser) {
