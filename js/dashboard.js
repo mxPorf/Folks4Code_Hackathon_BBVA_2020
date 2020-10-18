@@ -1,49 +1,54 @@
 $(document).ready(function(){
 
-$('#carouselAsMenu').carousel({
- interval: false,
- keyboard: true,
- wrap: true,
- ride: false,
-});
+// $('#carouselAsMenu').carousel({
+//  interval: false,
+//  keyboard: true,
+//  wrap: true,
+//  ride: false,
+// });
 
 $('#firstPage').click( () => {
-  alert('first click');
-  $('.carousel').carousel(0);
+  alert('continua tu aprendizaje')
+  window.open('https://www.google.com');
 
 });
 
 $('#secondPage').click( () => {
-  $('#carouselAsMenu').carousel(1);
+  alert('tus planes de estudio');
 });
 
 $('#thirdPage').click( () => {
-  $('#carouselAsMenu').carousel(2);
+  alert('seccion de ayuda');
+});
+
+$('#exitFromApp').click( () => {
+  alert('Hasta luego ;)');
+  window.close();
 });
 
 
 
 
-$('.carousel').on('slide.bs.carousel', function (e) {
-  // do something…
-  if(e.to == 0){
-    alert('1');
-    /*$('#firstPage').style.color = #3F6FAF;
-    $('#secondPage').style.color = black;
-    $('#thirdPage').style.color = black;*/
-
-  }else if(e.to == 1){
-    alert('1')
-    $('#firstPage').style.color = 'black';
-    $('#secondPage').style.color = '#3F6FAF';
-    $('#thirdPage').style.color = 'black';
-  }else if(e.to == 2){
-    $('#firstPage').style.color = 'black';
-    $('#secondPage').style.color = 'black';
-    $('#thirdPage').style.color = '#3F6FAF';
-  }else{
-    alert('error: este slide no existe');
-  }
-})
+// $('.carousel').on('slide.bs.carousel', function (e) {
+//   // do something…
+//   if(e.to == 0){
+//     alert('1');
+//     /*$('#firstPage').style.color = #3F6FAF;
+//     $('#secondPage').style.color = black;
+//     $('#thirdPage').style.color = black;*/
+//
+//   }else if(e.to == 1){
+//     alert('1')
+//     $('#firstPage').style.color = 'black';
+//     $('#secondPage').style.color = '#3F6FAF';
+//     $('#thirdPage').style.color = 'black';
+//   }else if(e.to == 2){
+//     $('#firstPage').style.color = 'black';
+//     $('#secondPage').style.color = 'black';
+//     $('#thirdPage').style.color = '#3F6FAF';
+//   }else{
+//     alert('error: este slide no existe');
+//   }
+// })
 
 });
