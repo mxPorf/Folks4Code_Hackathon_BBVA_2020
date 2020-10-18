@@ -111,8 +111,14 @@ var Edu4Future = window.Edu4Future || {};
     $(function onDocReady() {
         $('#signinButton').click(handleSignin);
         $('#finishedSignUpButton').click(handleRegister);
+        $('#exitFromApp').click(handleOut);
         $('#verifyForm').submit(handleVerify);
     });
+
+    function handleOut(event){
+      userPool.getCurrentUser().signOut();
+      window.location.href = 'index.html';
+    }
 
     function handleSignin(event) {
         var email = $('#emailInputSignin').val();
