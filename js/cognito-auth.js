@@ -110,7 +110,7 @@ var WildRydes = window.WildRydes || {};
 
     $(function onDocReady() {
         $('#signinButton').click(handleSignin);
-        $('#registrationForm').submit(handleRegister);
+        $('#finishedSignUpButton').click(handleRegister);
         $('#verifyForm').submit(handleVerify);
     });
 
