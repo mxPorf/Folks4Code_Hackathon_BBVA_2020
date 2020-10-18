@@ -11,6 +11,7 @@
 <!--===============================================================================================-->
 
   <script src="js/vendor/modernizr.js"></script>
+  <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
 </head>
 <body>
   <div class="container">
@@ -25,9 +26,10 @@
         <fieldset class="section is-active">
           <h1>Tus Datos</h1>
           <input type="text" name="name" id="name" placeholder="Nombre de usuario">
-          <input type="text" name="email" id="email" placeholder="Email">
-          <input type="password" name="password" id="password" placeholder="Contraseña">
-          <input type="password" name="password2" id="password2" placeholder="Reescribe tu contraseña">
+          <input type="text" name="email" id="emailInputRegister" placeholder="Email">
+
+          <input type="password" name="password" id="passwordInputRegister" placeholder="Contraseña">
+          <input type="password" name="password2" id="password2InputRegister" placeholder="Reescribe tu contraseña">
           <div class="button">Siguiente</div>
         </fieldset>
         <fieldset class="section">
@@ -86,19 +88,20 @@
         <fieldset class="section">
           <h3>Cuenta creada</h3>
           <p>Gracias! Se creo tu cuenta y tu perfil.</p>
-          <div class="button">Reset Form</div>
+          <div class="button" id="finishedSignUpButton">Ingresa</div>
         </fieldset>
       </form>
     </div>
   </div>
-
  <!--===============================================================================================-->
  <!--WILDHORSESCRIPT-->
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
- <!--===============================================================================================-->
- <script src="js/signinform.js"></script>
-<!--===============================================================================================-->
-	
+
+<script src="js/vendor/aws-cognito-sdk.min.js"></script>
+<script src="js/vendor/amazon-cognito-identity.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/cognito-auth.js"></script>
+<script src="js/signinform.js"></script>
 </body>
 </html>

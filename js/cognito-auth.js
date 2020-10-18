@@ -1,6 +1,6 @@
-/*global WildRydes _config AmazonCognitoIdentity AWSCognito*/
+/*global Edu4Future _config AmazonCognitoIdentity AWSCognito*/
 
-var WildRydes = window.WildRydes || {};
+var Edu4Future = window.Edu4Future || {};
 
 (function scopeWrapper($) {
     var signinUrl = '/index.html';
@@ -25,11 +25,11 @@ var WildRydes = window.WildRydes || {};
         AWSCognito.config.region = _config.cognito.region;
     }
 
-    WildRydes.signOut = function signOut() {
+    Edu4Future.signOut = function signOut() {
         userPool.getCurrentUser().signOut();
     };
 
-    WildRydes.authToken = new Promise(function fetchCurrentAuthToken(resolve, reject) {
+    Edu4Future.authToken = new Promise(function fetchCurrentAuthToken(resolve, reject) {
         var cognitoUser = userPool.getCurrentUser();
 
         if (cognitoUser) {
@@ -109,19 +109,26 @@ var WildRydes = window.WildRydes || {};
      */
 
     $(function onDocReady() {
-        $('#signinButton').onClick(handleSignin);
-        $('#registrationForm').submit(handleRegister);
+        $('#signinButton').click(handleSignin);
+        $('#finishedSignUpButton').click(handleRegister);
+        $('#exitFromApp').click(handleOut);
         $('#verifyForm').submit(handleVerify);
     });
+
+    function handleOut(event){
+      userPool.getCurrentUser().signOut();
+      window.location.href = 'index.html';
+    }
 
     function handleSignin(event) {
         var email = $('#emailInputSignin').val();
         var password = $('#passwordInputSignin').val();
+        console.log('email: ' + email + '. password: ' + password);
         event.preventDefault();
         signin(email, password,
             function signinSuccess() {
                 console.log('Successfully Logged In');
-                window.location.href = 'ride.html';
+                window.location.href = 'dashboard.html';
             },
             function signinError(err) {
                 alert(err);
