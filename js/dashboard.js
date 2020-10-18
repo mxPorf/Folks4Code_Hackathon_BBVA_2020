@@ -9,7 +9,7 @@ $(document).ready(function(){
 
 $('#firstPage').click( () => {
   alert('continua tu aprendizaje')
-  window.open('https://www.google.com');
+  window.open('https://conversabbva.btgapps.com/conversa/faceme?instanceId=31790727-8632-383e-b884-5eb2b9e74ddd&langCode=es_ES');
 
 });
 
