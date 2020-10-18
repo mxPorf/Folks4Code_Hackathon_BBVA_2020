@@ -83,8 +83,12 @@ fieldset{
   max-width: 700px;
   margin: 0 auto;
   position: relative;
-  top: 200px;
-  border: 3px solid #3F6FAF;
+  top: 75%;
+}
+.container-logo{
+  width: 100%;
+  position: relative;
+ 
 }
 
 .row{
